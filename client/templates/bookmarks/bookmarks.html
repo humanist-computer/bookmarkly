@@ -1,0 +1,20 @@
+<template name="bookmarks">
+	<div class="sub-controls">
+		{{#if hasBookmarks}}
+			<div class="input-field search-by-tag-input">
+				<input type="text" name="search-by-tag-input" id="search-by-tag-input" class="validate js-search-by-tag-input-field" placeholder="Search by tag">
+			</div>
+			<a href="/new" class="discuss blue btn btn--primary waves-effect waves-light">New +</a>
+		{{/if}}
+
+	</div>
+	<ul class="collection">
+		{{#if hasBookmarks}}
+		   	{{#each bookmarks}}
+				{{> bookmark}}
+		   	{{/each}}
+		{{else}}
+			<h4>There are no bookmarks. Why not <a href="/new">create one</a>?</h4>
+		{{/if}}
+	</ul>
+</template>

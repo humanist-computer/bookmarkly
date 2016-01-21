@@ -1,0 +1,23 @@
+<template name="bookmark">
+    <li class="bookmarks__item {{#if private}}bookmarks__item--private{{/if}}">
+      	<h5 class="bookmarks__title"><a class="bookmarks__link" href="{{url}}">
+        
+        {{! Commenting out this functionality for now...
+            #if private
+                <a class="collection-item-private-icon tooltipped" data-position="top" data-delay="50" data-tooltip="Private bookmark"><i class="chip zmdi zmdi-lock-outline"></i></a>
+        }}
+
+        {{title}}</a></h5>
+        <h6 class="bookmarks__url">{{domain}}</h6>
+        {{#if ownBookmark}}
+            <a href="{{pathFor 'bookmarkEdit'}}" class="bookmarks__edit-btn right">Edit</a>
+        {{/if}}
+        <div class="row bookmarks__tags">
+            <div class="col s12">
+                {{#each tags}}
+                    {{> tag}}
+                {{/each}}
+            </div>
+        </div>
+  </li>
+</template>

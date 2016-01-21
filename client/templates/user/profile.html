@@ -1,0 +1,39 @@
+<template name="profile">
+	<div class="row">
+		<form class="col s12 bookmark-form">
+			
+			<!-- userbane input -->
+			<div class="row">
+				<div class="input-field col s12">
+					<input name="username" id="username" type="text" value="{{username}}" placeholder="Username" class="js-username" disabled />
+				</div>
+			</div>
+			
+			<!-- email input -->
+			<div class="row {{errorClass 'email'}}">
+				<div class="input-field col s12">
+					<input name="email" id="title" type="email" placeholder="Your email address" value="{{email}}" class="js-email" disabled />
+<!-- 					<span class="help-block">{{errorMessage 'email'}}</span> -->
+				</div>
+			</div>
+
+			<!-- URL input -->
+			<div class="row">
+				<div class="input-field col s12">
+					<input name="bio" id="bio" type="text" value="{{bio}}" placeholder="Bio" class="js-bio">
+				</div>
+			</div>
+			
+			<!-- Submit -->
+			<div class="row">		 
+				<div class="col s6">
+					<input type="submit" value="Submit" class="btn blue btn-primary"/>
+				</div>
+				<div class="col s6 text-right">
+					<a class="btn" href="/">Cancel</a>
+					<a class="btn red js-delete" href="#">Delete</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>

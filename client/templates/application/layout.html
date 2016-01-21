@@ -1,0 +1,17 @@
+<template name="layout">
+	{{> header}}
+	{{> sAlert}}
+	<div class="container main-layout-container">
+		{{> errors}}
+		<div id="main" class="row-fluid">
+			{{> yield}}
+		</div>
+	</div>
+	<footer class="page-footer white">
+	  <div class="footer-copyright">
+	    <div class="">
+	    Bookmarkly. A thing by <a class="text-lighten-3" href="http://twitter.com/aaronmarruk">@aaronmarruk</a>
+	    </div>
+	  </div>
+	</footer>
+</template>

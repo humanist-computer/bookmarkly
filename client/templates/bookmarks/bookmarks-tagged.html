@@ -1,0 +1,18 @@
+<template name="bookmarksTagged">
+<div class="sub-controls">
+	<div class="input-field search-by-tag-input">
+		<input type="text" name="search-by-tag-input" id="search-by-tag-input" class="validate js-search-by-tag-input-field" placeholder="Search by tag" value="{{tag}}">
+	</div>
+	<a href="{{pathFor 'bookmarks'}}" class="discuss btn blue waves-effect waves-light">All bookmarks</a>
+	<a href="/new" class="discuss blue btn btn--primary waves-effect waves-light">New +</a>
+</div>
+<ul class="collection">
+   	{{#if hasBookmarks}}
+   	   	{{#each bookmarks}}
+   			{{> bookmark}}
+   	   	{{/each}}
+   	{{else}}
+   		<h4>There are no bookmarks tagged "{{tag}}".</h4>
+   	{{/if}}
+</ul>
+</template>

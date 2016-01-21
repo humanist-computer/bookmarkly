@@ -1,0 +1,73 @@
+<template name="bookmarkSubmit">
+<div class="row">
+	<form class="col s12 bookmark-form">
+		
+		<!-- URL input -->
+		<div class="row {{errorClass 'url'}}">
+			<div class="input-field col s12">
+				<input name="url" id="url" type="text" placeholder="URL" value="" class="js-url">
+				<span class="help-block">{{errorMessage 'url'}}</span>
+			</div>
+		</div>
+		
+		<!-- Title input -->
+		<div class="row {{errorClass 'title'}}">
+			<div class="input-field col s12">
+				<input name="title" id="title" type="text" placeholder="Title" value="" class="js-title"/>
+				<span class="help-block">{{errorMessage 'title'}}</span>
+			</div>
+		</div>
+		
+		<!-- Tag select -->
+		<div class="row">
+			<div class="col s12 possible-tags">
+				{{#each possibleTags}}
+					<a class="js-tag-select-btn btn blue possible-tags-tag {{#if selected}}disabled{{/if}}">{{text}}</a>
+				{{/each}}
+			</div>
+		</div>
+		
+		<!-- Add tag input -->
+		<div class="row">
+			<div class="input-field col s12">
+				<input name="tag-input" id="tag-input" type="text" placeholder="Add tags" value="" class="js-tag-input"/>
+			</div>
+		</div>
+
+		<!-- Tags Select2 input -->
+		<div class="row">
+			<div class="input-field col s12">
+				<div class="controls js-select2-container">
+					<select multiple="multiple" style="width: 75%" name="tagsinput" class="tagsinput"></select>
+				</div>
+				<input id="value" type="hidden" style="width:300px"/>
+			</div>
+		</div>
+
+		<!-- Private checkbox -->
+		<div class="row">
+			<div class="col s12">
+				Make this bookmark private?
+				<div class="switch">
+					<label>
+						No
+						<input type="checkbox" name="private" checked>
+						<span class="lever"></span>
+						Yes
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<!-- Submit -->
+		<div class="row">		 
+			<div class="col s6">
+				<input type="submit" value="Submit" class="btn blue btn-primary"/>
+			</div>
+			<div class="col s6 text-right">
+				<a class="btn" href="/">Cancel</a>
+			</div>
+		</div>
+	</form>
+</div>
+</template>

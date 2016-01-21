@@ -1,0 +1,20 @@
+<template name="header">
+<div class="navbar-fixed">
+	<!-- Dropdown Structure -->
+	<ul id="dropdown1" class="dropdown-content">
+		<li><a href="#!">My profile</a></li>
+		<li><a href="#!">Likes</a></li>
+		<li><a href="#!">Settings</a></li>
+		<li class="divider"></li>
+		<li><a href="#!" class="js-logout">Sign out</a></li>
+	</ul>
+	<nav>
+		<div class="nav-wrapper dark-blue">
+			<a href="{{pathFor 'bookmarks'}}" class="brand-logo nav__item">Bookmarkly</a>
+			<ul id="nav-mobile" class="right">
+				<li><a class="dropdown-button nav__item" href="#!" data-activates="dropdown1">{{username}}</a></li>
+			</ul>
+		</div>
+	</nav>
+</div>
+</template>

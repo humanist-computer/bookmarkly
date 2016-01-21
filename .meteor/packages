@@ -1,0 +1,26 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform
+underscore
+iron:router
+sacha:spin
+accounts-password
+meteorhacks:npm
+
+
+npm-container
+http
+natestrauser:select2@=4.0.0
+useraccounts:iron-routing
+ixdi:material-design-iconic-font
+juliancwirko:s-alert
+juliancwirko:s-alert-slide
+juliancwirko:s-alert-scale
+fourseven:scss
+useraccounts:core
+useraccounts:unstyled
+msavin:mongol@=1.1.5
